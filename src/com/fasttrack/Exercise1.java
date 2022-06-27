@@ -12,14 +12,13 @@ public class Exercise1 {
     public List<String> findingPairs(int[] array, int givenSum) {
         List<String> arrayList = new ArrayList<String>();
         for (int i = 0; i < array.length; i++) {
-            for (int j = 1; j < array.length; j++) {
+            for (int j = i+1; j < array.length; j++) {
                 if (array[i] + array[j] == givenSum) {
                     int[] pair = {array[i], array[j]};
                     arrayList.add(Arrays.toString(pair));
                 }
             }
         }
-        //  System.out.println(arrayList);
         return arrayList;
     }
 
